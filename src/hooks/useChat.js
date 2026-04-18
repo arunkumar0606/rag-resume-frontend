@@ -17,7 +17,7 @@ export const useChat = () => {
     } catch {
       setChatHistory(prev => [
         ...prev,
-        { type: "bot", text: "Unable to reach the API. Please ensure the server is running." },
+        { type: "bot", text: "Backend is spinning up — this may take 2 mins on the first load. Please wait and message me again." },
       ]);
     } finally {
       setLoading(false);
