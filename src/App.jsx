@@ -6,6 +6,7 @@ import ChatWindow from "./components/chat/ChatWindow";
 import InputBar from "./components/chat/InputBar";
 import { useChat } from "./hooks/useChat";
 import theme from "./theme/theme";
+import Banner from "./components/chat/Banner";
 
 export default function App() {
   const { chatHistory, loading, sendMessage } = useChat();
@@ -14,6 +15,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box sx={{ maxWidth: 600, mx: "auto", mt: 5, px: 2 }}>
+        <Banner />
         <ChatHeader />
         <ChatWindow
           chatHistory={chatHistory}
